@@ -8,8 +8,8 @@ jobs:
       - name: Create New User and Enable RDP
         shell: pwsh
         run: |
-          $Password = ConvertTo-SecureString "123qwe!@#QWE" -AsPlainText -Force
-          New-LocalUser -Name "mishuka" -Password $Password -FullName "Full Name" -Description "Description"
+          $Password = ConvertTo-SecureString "qwe234ASD@#$" -AsPlainText -Force
+          New-LocalUser -Name "ryder" -Password $Password -FullName "Full Name" -Description "Description"
 
           Add-LocalGroupMember -Group "Administrators" -Member "mishuka"
 
@@ -38,7 +38,7 @@ jobs:
         run: Start-Sleep -Seconds 5
 
       - name: Authenticate Ngrok
-        run: ngrok config add-authtoken 2x4myhB3OQRUwZJEzDzVPmlgVZj_7dxDJcLHhtS64kw4HkD5X
+        run: ngrok config add-authtoken 31XhmrE0gQLmzckdeQtMoxY5rGM_EKHtf4EfvgApwsjkxaCA
 
       - name: Run Ngrok with Debugging
         shell: cmd
